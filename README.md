@@ -1,5 +1,7 @@
 # Aayush Shrestha - Portfolio
 
+**Live at [theaayushstha.com](https://theaayushstha.com)**
+
 Personal portfolio website showcasing AI Agent development work, built with React and Vite.
 
 ## Tech Stack
