@@ -85,8 +85,11 @@ export default function Footer() {
           </div>
 
           {/* Copyright */}
-          <div className="text-sm" style={{ color: '#6b6b6b' }}>
-            <p className="flex items-center gap-1.5 font-mono">
+          <div className="text-sm text-right" style={{ color: '#6b6b6b' }}>
+            <p className="italic mb-1" style={{ color: '#888' }}>
+              "Dream big, build bigger"
+            </p>
+            <p className="flex items-center justify-end gap-1.5 font-mono">
               © {new Date().getFullYear()} · Built with
               <Heart size={12} style={{ color: '#F59E0B' }} fill="#F59E0B" />
               by Aayush
