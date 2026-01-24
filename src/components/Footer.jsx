@@ -1,4 +1,4 @@
-import { Github, Linkedin, Heart } from 'lucide-react';
+import { Github, Linkedin } from 'lucide-react';
 import { personalInfo } from '../data/portfolio';
 
 export default function Footer() {
@@ -89,10 +89,8 @@ export default function Footer() {
             <p className="italic mb-1" style={{ color: '#888' }}>
               "Dream big, build bigger"
             </p>
-            <p className="flex items-center justify-end gap-1.5 font-mono">
-              © {new Date().getFullYear()} · Built with
-              <Heart size={12} style={{ color: '#F59E0B' }} fill="#F59E0B" />
-              by Aayush
+            <p className="font-mono">
+              © {new Date().getFullYear()} · Built by Aayush
             </p>
           </div>
         </div>
