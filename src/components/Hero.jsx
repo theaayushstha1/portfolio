@@ -235,7 +235,7 @@ export default function Hero() {
                   }}
                 >
                   <iframe
-                    src="https://www.youtube.com/embed/KwR7njQHREM?autoplay=1&mute=1&loop=1&playlist=KwR7njQHREM&controls=0&showinfo=0&rel=0&modestbranding=1&start=3&end=18"
+                    src="https://www.youtube.com/embed/KwR7njQHREM?autoplay=1&mute=1&loop=1&playlist=KwR7njQHREM&controls=0&showinfo=0&rel=0&modestbranding=1&start=4&end=18"
                     title="YouTube Short"
                     frameBorder="0"
                     allow="autoplay; encrypted-media; fullscreen"
