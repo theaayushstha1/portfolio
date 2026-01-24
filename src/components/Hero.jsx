@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { ArrowDown, Github, Linkedin, Twitter, Sparkles, Bot } from 'lucide-react';
+import { ArrowDown, Github, Linkedin, Sparkles, Code2, GraduationCap, Users, Smartphone } from 'lucide-react';
 import { personalInfo, highlights } from '../data/portfolio';
 
 export default function Hero() {
@@ -19,7 +19,7 @@ export default function Hero() {
       />
 
       <div className="container relative z-10">
-        <div className="max-w-4xl">
+        <div className="max-w-xl">
           {/* Status badge */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -32,7 +32,7 @@ export default function Hero() {
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full opacity-75" style={{ backgroundColor: '#4ade80' }}></span>
               <span className="relative inline-flex rounded-full h-2 w-2" style={{ backgroundColor: '#4ade80' }}></span>
             </span>
-            <span className="text-sm font-mono" style={{ color: '#8A8780' }}>Building AI Agents</span>
+            <span className="text-sm font-mono" style={{ color: '#8A8780' }}>Available for Opportunities</span>
           </motion.div>
 
           {/* Main heading */}
@@ -45,7 +45,7 @@ export default function Hero() {
           >
             I'm <span style={{ color: '#F59E0B' }}>Aayush</span>
             <br />
-            <span style={{ color: '#6b6b6b' }}>AI Agent Developer</span>
+            <span style={{ color: '#6b6b6b' }}>Software Engineer</span>
           </motion.h1>
 
           {/* Tagline */}
@@ -53,10 +53,10 @@ export default function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="flex items-center gap-2 mb-6"
+            className="flex items-center gap-2 mb-4"
           >
-            <Bot style={{ color: '#6b6b6b' }} size={20} />
-            <p className="text-lg md:text-xl font-mono" style={{ color: '#8A8780' }}>
+            <Code2 style={{ color: '#6b6b6b' }} size={16} />
+            <p className="text-sm md:text-base font-mono" style={{ color: '#8A8780' }}>
               {personalInfo.tagline}
               <span className="animate-blink" style={{ color: '#F59E0B' }}>_</span>
             </p>
@@ -67,7 +67,7 @@ export default function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.3 }}
-            className="text-base md:text-lg leading-relaxed mb-8 max-w-2xl"
+            className="text-sm md:text-base leading-relaxed mb-6"
             style={{ color: '#6b6b6b' }}
           >
             {personalInfo.bio}
@@ -80,7 +80,7 @@ export default function Hero() {
             transition={{ duration: 0.8, delay: 0.4 }}
             className="flex flex-wrap gap-2 mb-8"
           >
-            {['Vertex AI', 'Google ADK', 'LangChain', 'RAG Systems'].map((tech) => (
+            {['React', 'Python', 'AI Agents', 'RAG', 'MCP', 'Google ADK'].map((tech) => (
               <span
                 key={tech}
                 className="px-3 py-1.5 text-xs font-mono rounded-full"
@@ -100,11 +100,11 @@ export default function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.5 }}
-            className="flex flex-wrap items-center gap-4 mb-12"
+            className="flex flex-wrap items-center gap-3 mb-10"
           >
             <button onClick={scrollToWork} className="btn-primary">
               <Sparkles size={16} />
-              View My Agents
+              View My Work
             </button>
             <a href={`mailto:${personalInfo.email}`} className="btn-secondary">
               Get in Touch
@@ -116,14 +116,14 @@ export default function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.6 }}
-            className="flex flex-wrap gap-8 mb-12"
+            className="flex flex-wrap gap-6 mb-10"
           >
             {highlights.map((stat) => (
               <div key={stat.label} className="text-center">
-                <p className="text-3xl md:text-4xl font-display font-bold" style={{ color: '#FAFAF8' }}>
+                <p className="text-2xl md:text-3xl font-display font-bold" style={{ color: '#FAFAF8' }}>
                   {stat.value}
                 </p>
-                <p className="text-sm font-mono" style={{ color: '#6b6b6b' }}>{stat.label}</p>
+                <p className="text-xs font-mono" style={{ color: '#6b6b6b' }}>{stat.label}</p>
               </div>
             ))}
           </motion.div>
@@ -137,56 +137,147 @@ export default function Hero() {
           >
             <span className="text-sm" style={{ color: '#6b6b6b' }}>Connect</span>
             <div className="flex items-center gap-1">
-              {[
-                { href: personalInfo.links.github, icon: Github, label: 'GitHub' },
-                { href: personalInfo.links.linkedin, icon: Linkedin, label: 'LinkedIn' },
-                { href: personalInfo.links.twitter, icon: Twitter, label: 'Twitter' },
-              ].map(({ href, icon: Icon, label }) => (
-                <a
-                  key={label}
-                  href={href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label={label}
-                  className="p-2.5 rounded-lg transition-all duration-200"
-                  style={{ color: '#6b6b6b' }}
-                  onMouseEnter={(e) => e.currentTarget.style.color = '#FAFAF8'}
-                  onMouseLeave={(e) => e.currentTarget.style.color = '#6b6b6b'}
-                >
-                  <Icon size={18} />
-                </a>
-              ))}
+              <a
+                href={personalInfo.links.github}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="GitHub"
+                className="p-2.5 rounded-lg transition-all duration-200"
+                style={{ color: '#6b6b6b' }}
+                onMouseEnter={(e) => e.currentTarget.style.color = '#FAFAF8'}
+                onMouseLeave={(e) => e.currentTarget.style.color = '#6b6b6b'}
+              >
+                <Github size={18} />
+              </a>
+              <a
+                href={personalInfo.links.linkedin}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="LinkedIn"
+                className="p-2.5 rounded-lg transition-all duration-200"
+                style={{ color: '#6b6b6b' }}
+                onMouseEnter={(e) => e.currentTarget.style.color = '#FAFAF8'}
+                onMouseLeave={(e) => e.currentTarget.style.color = '#6b6b6b'}
+              >
+                <Linkedin size={18} />
+              </a>
+              <a
+                href={personalInfo.links.twitter}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="X"
+                className="p-2.5 rounded-lg transition-all duration-200"
+                style={{ color: '#6b6b6b' }}
+                onMouseEnter={(e) => e.currentTarget.style.color = '#FAFAF8'}
+                onMouseLeave={(e) => e.currentTarget.style.color = '#6b6b6b'}
+              >
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+                </svg>
+              </a>
             </div>
           </motion.div>
         </div>
 
-        {/* Small profile indicator */}
-        <motion.div
-          initial={{ opacity: 0, x: 50 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.8, delay: 0.8 }}
-          className="hidden lg:block absolute right-8 top-1/2 -translate-y-1/2"
-        >
-          <div className="flex flex-col items-center gap-4">
-            <div className="relative">
-              <img
-                src="/profile.jpeg"
-                alt={personalInfo.name}
-                className="w-20 h-20 rounded-full object-cover"
-                style={{ border: '2px solid rgba(255, 255, 255, 0.1)' }}
-              />
-              <div
-                className="absolute -bottom-1 -right-1 w-6 h-6 rounded-full flex items-center justify-center"
-                style={{ backgroundColor: '#F59E0B' }}
-              >
-                <Bot size={12} style={{ color: '#0a0a0b' }} />
+        {/* Profile and images - clean layout with connections */}
+        <div className="hidden xl:block absolute right-16 top-1/2 -translate-y-1/2">
+          <div className="flex flex-col items-center">
+            {/* Profile image */}
+            <img
+              src="/profile.jpeg"
+              alt={personalInfo.name}
+              className="w-24 h-24 rounded-full object-cover"
+              style={{
+                border: '2px solid #F59E0B',
+                boxShadow: '0 0 20px rgba(245, 158, 11, 0.2)'
+              }}
+            />
+
+            {/* @0xYush text - below profile */}
+            <p className="mt-2 text-sm font-mono" style={{ color: '#F59E0B' }}>@0xYush</p>
+
+            {/* Connecting line */}
+            <div className="w-px h-6 mt-2" style={{ backgroundColor: 'rgba(245, 158, 11, 0.4)' }} />
+
+            {/* YouTube Short with Yosemite images on sides */}
+            <div className="mt-2 flex flex-col items-center">
+              <div className="flex items-center gap-3">
+                {/* Left image */}
+                <div className="flex flex-col items-center">
+                  <div
+                    className="rounded-lg overflow-hidden"
+                    style={{
+                      width: '70px',
+                      height: '100px',
+                      border: '1px solid rgba(255, 255, 255, 0.1)'
+                    }}
+                  >
+                    <img
+                      src="/me/yosemite-pose1.jpg"
+                      alt="Yosemite pose"
+                      className="w-full h-full object-cover"
+                      style={{ imageRendering: 'auto', objectPosition: 'center 30%' }}
+                    />
+                  </div>
+                  <span className="mt-1 text-xs font-mono" style={{ color: '#8A8780' }}>outgoing</span>
+                </div>
+
+                {/* Left arrow */}
+                <div style={{ color: 'rgba(255, 255, 255, 0.3)', fontSize: '10px' }}>→</div>
+
+                {/* YouTube video */}
+                <div
+                  className="rounded-xl overflow-hidden"
+                  style={{
+                    width: '100px',
+                    height: '180px',
+                    border: '2px solid rgba(255, 255, 255, 0.15)'
+                  }}
+                >
+                  <iframe
+                    src="https://www.youtube.com/embed/nYDDA4cE_r8?autoplay=1&mute=1&loop=1&playlist=nYDDA4cE_r8&controls=0&showinfo=0&rel=0&modestbranding=1&start=7&end=22"
+                    title="YouTube Short"
+                    frameBorder="0"
+                    allow="autoplay; encrypted-media; fullscreen"
+                    allowFullScreen
+                    style={{
+                      width: '100%',
+                      height: '100%'
+                    }}
+                  />
+                </div>
+
+                {/* Right arrow */}
+                <div style={{ color: 'rgba(255, 255, 255, 0.3)', fontSize: '10px' }}>←</div>
+
+                {/* Right image */}
+                <div className="flex flex-col items-center">
+                  <div
+                    className="rounded-lg overflow-hidden"
+                    style={{
+                      width: '70px',
+                      height: '100px',
+                      border: '1px solid rgba(255, 255, 255, 0.1)'
+                    }}
+                  >
+                    <img
+                      src="/me/yosemite-pose2.jpg"
+                      alt="Yosemite dance pose"
+                      className="w-full h-full object-cover"
+                      style={{ imageRendering: 'auto', objectPosition: 'center 40%' }}
+                    />
+                  </div>
+                  <span className="mt-1 text-xs font-mono" style={{ color: '#8A8780' }}>adventurous</span>
+                </div>
               </div>
-            </div>
-            <div className="text-center">
-              <p className="text-xs font-mono" style={{ color: '#6b6b6b' }}>@0xYush</p>
+
+              {/* Caption */}
+              <p className="mt-3 text-sm font-mono text-center" style={{ color: '#6b6b6b' }}>
+                <span style={{ color: '#F59E0B' }}>13+</span> years of dance · my other side
+              </p>
             </div>
           </div>
-        </motion.div>
+        </div>
       </div>
 
       {/* Scroll indicator */}

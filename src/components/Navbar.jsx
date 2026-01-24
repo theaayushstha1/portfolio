@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Menu, X, Bot } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 import { personalInfo } from '../data/portfolio';
 
 const navLinks = [
@@ -32,12 +32,11 @@ export default function Navbar() {
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled
-          ? 'backdrop-blur-md'
-          : 'bg-transparent'
-      }`}
-      style={isScrolled ? { backgroundColor: 'rgba(10, 10, 11, 0.9)', borderBottom: '1px solid rgba(255, 255, 255, 0.06)' } : {}}
+      className="fixed top-0 left-0 right-0 z-50 transition-all duration-300 backdrop-blur-md"
+      style={{
+        backgroundColor: isScrolled ? 'rgba(10, 10, 11, 0.95)' : 'rgba(10, 10, 11, 0)',
+        borderBottom: isScrolled ? '1px solid rgba(255, 255, 255, 0.04)' : '1px solid transparent'
+      }}
     >
       <div className="container">
         <div className="flex items-center justify-between h-16">
@@ -48,12 +47,10 @@ export default function Navbar() {
               e.preventDefault();
               window.scrollTo({ top: 0, behavior: 'smooth' });
             }}
-            className="flex items-center gap-2 font-display text-xl transition-colors"
-            style={{ color: '#FAFAF8' }}
+            className="font-display text-2xl font-bold"
           >
-            <Bot size={20} style={{ color: '#F59E0B' }} />
-            <span>Aayush</span>
-            <span style={{ color: '#F59E0B' }}>.</span>
+            <span style={{ color: '#FAFAF8' }}>A</span>
+            <span style={{ color: '#F59E0B' }}>.S</span>
           </a>
 
           {/* Desktop Nav */}

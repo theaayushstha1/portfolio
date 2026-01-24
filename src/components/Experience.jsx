@@ -28,7 +28,7 @@ export default function Experience() {
         <div ref={ref} className="max-w-3xl mx-auto">
           {experience.map((exp, index) => (
             <motion.div
-              key={exp.company}
+              key={`${exp.role}-${exp.period}`}
               initial={{ opacity: 0, x: -30 }}
               animate={isInView ? { opacity: 1, x: 0 } : {}}
               transition={{ duration: 0.5, delay: index * 0.15 }}
