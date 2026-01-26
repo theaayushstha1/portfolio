@@ -74,6 +74,18 @@ export const projects = [
     color: "amber",
   },
   {
+    title: "AgentX",
+    subtitle: "Autonomous Twitter AI Agent",
+    description: "An autonomous AI agent that monitors Twitter mentions and responds intelligently using Google Gemini. Built with the ReAct reasoning pattern, production guardrails, and deployed as a serverless app on Vercel with automatic scaling.",
+    tech: ["Python", "Google Gemini", "Twitter API", "Vercel", "ReAct Pattern"],
+    highlights: ["ReAct AI pattern", "Serverless architecture", "Production guardrails"],
+    image: "/projects/agentx.png",
+    links: {
+      github: "https://github.com/theaayushstha1/agentX"
+    },
+    color: "cyan",
+  },
+  {
     title: "ML Document Extraction",
     subtitle: "Machine Learning Research",
     description: "Fine tuned TrOCR and BERT models for automated metadata extraction from historical manuscripts. Extended context window to 3k tokens for dense document processing.",
