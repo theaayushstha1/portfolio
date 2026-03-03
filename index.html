@@ -50,7 +50,7 @@
   </script>
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
-    html { scroll-behavior: smooth; }
+    html { scroll-behavior: smooth; overflow-x: hidden; }
     body {
       font-family: 'DM Sans', sans-serif;
       background-color: #f5f0ea;
@@ -354,7 +354,7 @@
     </section>
 
     <!-- Straddling title - sits on the hero/about boundary -->
-    <div class="absolute bottom-0 left-0 right-0 z-30 pointer-events-none" style="transform: translateY(50%);">
+    <div class="absolute bottom-0 left-0 right-0 z-30 pointer-events-none overflow-hidden" style="transform: translateY(50%);">
       <div class="max-w-[1320px] mx-auto px-6 lg:px-10">
         <h1 class="hero-title">A.S'26</h1>
       </div>
@@ -366,7 +366,7 @@
     <div class="relative z-10 max-w-[1320px] mx-auto px-6 lg:px-10">
       <div class="grid lg:grid-cols-[1.1fr_0.9fr] gap-12 lg:gap-16 items-start">
         <!-- Left column -->
-        <div>
+        <div class="min-w-0">
           <p class="label-mono text-warm-500 mb-5">Who I am</p>
           <h2 class="font-display font-bold text-4xl lg:text-5xl tracking-tightest leading-[1.05] text-coal mb-6">
             Aayush<br>Shrestha
@@ -427,7 +427,7 @@
           </div>
         </div>
         <!-- Right column -->
-        <div class="flex flex-col gap-5">
+        <div class="flex flex-col gap-5 min-w-0">
           <div class="relative rounded-lg overflow-hidden aspect-[3/4]">
             <img loading="lazy" decoding="async" src="images/about-photo.webp" alt="Aayush Shrestha" class="w-full h-full object-cover" style="object-position: 55% 15%; transform: scale(1.08);">
             <div class="absolute inset-0 bg-gradient-to-t from-coal/20 to-transparent"></div>
