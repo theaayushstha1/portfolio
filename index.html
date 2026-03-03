@@ -57,6 +57,7 @@
       color: #1a1714;
       line-height: 1.7;
       -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
     }
 
     .grain::before {
@@ -280,6 +281,9 @@
     .contact-link:active {
       transform: translateY(0);
     }
+
+    /* Hide scrollbar on dance gallery */
+    .dance-scroll::-webkit-scrollbar { display: none; }
   </style>
 </head>
 <body>
@@ -358,7 +362,7 @@
   </div>
 
   <!-- ====== ABOUT SECTION ====== -->
-  <section id="about" class="relative bg-cream grain py-24 lg:py-32">
+  <section id="about" class="relative bg-cream grain py-24 lg:py-32 overflow-hidden">
     <div class="relative z-10 max-w-[1320px] mx-auto px-6 lg:px-10">
       <div class="grid lg:grid-cols-[1.1fr_0.9fr] gap-12 lg:gap-16 items-start">
         <!-- Left column -->
@@ -379,9 +383,9 @@
               <a href="https://www.instagram.com/cleartalentgroup/" target="_blank" rel="noopener" class="text-coal font-semibold border-b border-coal/30 hover:border-ember hover:text-ember" style="transition: color 0.2s ease, border-color 0.2s ease">Clear Talent Group</a>.
               Dance taught me discipline, creativity under pressure, and how to perform when it counts.
             </p>
-            <div class="flex items-center gap-4">
+            <div class="dance-scroll flex items-center gap-4 overflow-x-auto pb-3 -mx-6 px-6 lg:mx-0 lg:px-0 lg:overflow-visible" style="-webkit-overflow-scrolling: touch; scrollbar-width: none; -ms-overflow-style: none;">
               <!-- Small photos with arrows pointing to video -->
-              <div class="flex flex-col gap-2 items-center">
+              <div class="flex flex-col gap-2 items-center shrink-0">
                 <div class="relative rounded-md overflow-hidden w-[90px] aspect-square" style="box-shadow: 0 3px 12px rgba(74,63,53,0.12);">
                   <img loading="lazy" decoding="async" src="images/dance-young.webp" alt="Young dancer" class="w-full h-full object-cover">
                 </div>
@@ -398,7 +402,7 @@
                 <path d="M4 12h20M20 7l4 5-4 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
               </svg>
               <!-- Video -->
-              <div class="relative rounded-lg overflow-hidden w-[160px] shrink-0 aspect-[9/16]" style="box-shadow: 0 8px 30px rgba(74,63,53,0.15), 0 2px 8px rgba(74,63,53,0.1);">
+              <div class="relative rounded-lg overflow-hidden w-[140px] sm:w-[160px] shrink-0 aspect-[9/16]" style="box-shadow: 0 8px 30px rgba(74,63,53,0.15), 0 2px 8px rgba(74,63,53,0.1);">
                 <iframe
                   src="https://www.youtube.com/embed/KwR7njQHREM?start=4&end=17&autoplay=1&mute=1&loop=1&playlist=KwR7njQHREM&controls=0&showinfo=0&rel=0&modestbranding=1&playsinline=1"
                   class="absolute inset-0 w-full h-full"
@@ -413,7 +417,7 @@
                 <path d="M4 12h20M20 7l4 5-4 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
               </svg>
               <!-- KAOS scholarship photo -->
-              <div class="group relative rounded-lg overflow-hidden w-[160px] shrink-0 aspect-[9/16] cursor-pointer" style="box-shadow: 0 8px 30px rgba(74,63,53,0.15), 0 2px 8px rgba(74,63,53,0.1);">
+              <div class="group relative rounded-lg overflow-hidden w-[140px] sm:w-[160px] shrink-0 aspect-[9/16] cursor-pointer" style="box-shadow: 0 8px 30px rgba(74,63,53,0.15), 0 2px 8px rgba(74,63,53,0.1);">
                 <img loading="lazy" decoding="async" src="images/dance-kaos.webp" alt="KAOS Tour Scholarship 2023-2024" class="w-full h-full object-cover" style="transform: scale(1.15); object-position: center 40%;">
                 <div class="absolute inset-0 bg-coal/80 flex items-end p-3 opacity-0 group-hover:opacity-100" style="transition: opacity 0.25s ease;">
                   <p class="font-body text-cream text-[10px] leading-snug">KAOS Cast Tour Scholarship recipient, 2023 & 2024. Free tuition to all regional KAOS events across the USA.</p>
